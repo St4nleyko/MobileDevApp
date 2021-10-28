@@ -22,7 +22,7 @@
                     <button class="btn btn-info"v-if="canAddToCart" style="max-width:80%; margin-left: 8px;" v-on:click="addToCart">
                         <span ><i class="fas fa-cart-plus"></i></span>
                          Add to Cart
-                         ({{cartItemCount}})
+                         ({{cartItemCount}}) 
                     </button>
                     <button style="max-width:100%; margin-left: 8px;" disabled = "disabled" v-else>Out of stock</button>
                 </div>
@@ -35,10 +35,10 @@
              </div>
         </div>
         <script>
-            var schoolClub = new Vue({
+            var schoolClub = new Vue({  //creating vue instance
 
                 el:"#app",
-                data:{
+                data:{  //adding data
                     id:'1',
                     subject:'IT',
                     location:'Hendon',
@@ -49,7 +49,7 @@
                     },
                     cart:[],
                 },
-                methods: {
+                methods: {  //creating method for adding to cart
                     addToCart: function () {
                         this.cart.push(this.id);
                     }
