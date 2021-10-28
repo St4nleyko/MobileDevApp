@@ -15,19 +15,19 @@
             <div class="row container">
                 <h1>After School Club</h1>
                 <hr></hr>
-                <div class="col-lg-6 row m-auto">
+                <div class="col-lg-3 row m-auto">
                     <figure>
-                        <img height="300px" width="300px"  :src="subjectObj.img2" alt="">
+                        <img height="200px" width="200px"  :src="subjectObj.img2" alt="">
                     </figure>
-                    <button v-if="canAddToCart" style="max-width:50%; margin-left: 8px;" v-on:click="addToCart">
+                    <button class="btn btn-info"v-if="canAddToCart" style="max-width:80%; margin-left: 8px;" v-on:click="addToCart">
                         <span ><i class="fas fa-cart-plus"></i></span>
                          Add to Cart
                          ({{cartItemCount}})
                     </button>
-                    <button style="max-width:50%; margin-left: 8px;" disabled = "disabled" v-else>Out of stock</button>
+                    <button style="max-width:100%; margin-left: 8px;" disabled = "disabled" v-else>Out of stock</button>
                 </div>
 
-                <div class="col-lg-6 m-auto ">
+                <div class="col-lg-9 m-auto ">
                     <h1 v-text=' subject'></h1>
                     <h2>Location: {{location}}</h2>
                     <h3 v-text='price'></h3>
@@ -41,11 +41,10 @@
                 data:{
                     id:'1',
                     subject:'IT',
-                    location:'Hendonnn',
+                    location:'Hendon',
                     price:'1000',
-                    img:'room1.jpg',
                     subjectObj:{
-                        img2:'room1.jpg',
+                        img2:'pictures/Math.png',
                         stock: 5,
                     },
                     cart:[],
