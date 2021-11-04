@@ -31,6 +31,7 @@
                     <h1 v-text=' subject'></h1>
                     <h2>Location: {{location}}</h2>
                     <h3 v-text='price'></h3>
+                    <p>Stock: {{subjectObj.showstock}}</p>
                 </div>
              </div>
         </div>
@@ -46,11 +47,13 @@
                     subjectObj:{
                         img2:'pictures/Math.png',
                         stock: 5,
+                        showstock:5,
                     },
                     cart:[],
                 },
                 methods: {  //creating method for adding to cart
                     addToCart: function () {
+                        this.subjectObj.showstock=this.subjectObj.showstock-1;
                         this.cart.push(this.id);
                     }
                     
